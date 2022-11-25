@@ -6,7 +6,6 @@ use Livewire\LivewireServiceProvider;
 use Rezaulhreza\FlashToast\FlashToastServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
-
 {
     public function setUp(): void
     {
@@ -25,5 +24,4 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         // perform environment setup
     }
-
 }

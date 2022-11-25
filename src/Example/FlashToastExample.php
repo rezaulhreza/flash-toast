@@ -35,7 +35,6 @@ class FlashToastExample extends Component
     }
 
     public function render()
-
     {
         return <<<'blade'
 
