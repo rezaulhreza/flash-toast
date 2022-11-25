@@ -8,7 +8,7 @@ return [
         'warning' => 'warning',
         'info' => 'info',
         'light' => 'light',
-        'primary' => 'primary'
+        'primary' => 'primary',
         'secondary' => 'secondary',
         'dark' => 'dark',
     ],
