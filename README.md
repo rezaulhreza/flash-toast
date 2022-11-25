@@ -14,7 +14,7 @@ composer require rezaulhreza/flash-toast
 ```
 then publish the config file 
 ```bash
-composer require rezaulhreza/flash-toast-config
+php artisan vendor:publish --tag="flash-toast-config"
 ```
 publish the view files
 ```bash
