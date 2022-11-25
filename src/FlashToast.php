@@ -29,6 +29,31 @@ trait FlashToast
     {
         $this->flashToast($message, config('flash-toast.toast_type.info'));
     }
+    
+    public function toastError(string $message): void
+    {
+        $this->flashToast($message, config('flash-toast.toast_type.error'));
+    }
+
+    public function toastPrimary(string $message): void
+    {
+        $this->flashToast($message, config('flash-toast.toast_type.primary'));
+    }
+
+    public function toastSecondary(string $message): void
+    {
+        $this->flashToast($message, config('flash-toast.toast_type.secondary'));
+    }
+
+    public function toastLight(string $message): void
+    {
+        $this->flashToast($message, config('flash-toast.toast_type.light'));
+    }
+
+    public function toastDark(string $message): void
+    {
+        $this->flashToast($message, config('flash-toast.toast_type.dark'));
+    }
 
     protected function flashToast($content, string $level = 'success'): void
     {
