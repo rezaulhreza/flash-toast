@@ -20,6 +20,12 @@ publish the view files
 ```bash
 php artisan vendor:publish --tag="flash-toast-views"
 ```
+Once you publish the file, move the files from 
+```resources\views\vendor\flash-toast\components``` 
+to 
+``````resources\views\components```.
+now you can place the file anywhere you want such as <x-flash-toast/>.
+
 
 ## Usage
 Runs with the TALL stack: Laravel, TailwindCSS, Livewire, AlpineJS.
