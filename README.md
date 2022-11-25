@@ -26,6 +26,10 @@ to
 ````resources\views\components```.
 now you can place the file anywhere you want such as <x-flash-toast/>.
 
+alterantively, just do:
+```php
+@include('vendor.flash-toast.components.flash-toast')
+```
 
 ## Usage
 Runs with the TALL stack: Laravel, TailwindCSS, Livewire, AlpineJS.
