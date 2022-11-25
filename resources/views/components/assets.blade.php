@@ -28,7 +28,29 @@
   .alert-dismissible {
     padding-right: 35px;
   }
-
+  
+ .alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    }
+   
+   .alert-light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+    }
+    
+    .alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+  .alert-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    }
   .alert-dismissable .close,
   .alert-dismissible .close {
     position: relative;
