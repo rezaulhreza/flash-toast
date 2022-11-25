@@ -29,10 +29,15 @@
     padding-right: 35px;
   }
   
- .alert-primary {
+  .alert-primary {
     color: #004085;
     background-color: #cce5ff;
     border-color: #b8daff;
+    }
+   .alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
     }
    
    .alert-light {
