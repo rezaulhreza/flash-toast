@@ -23,6 +23,11 @@
     <span x-show="text" x-text="text"></span>
     <div x-show="html" x-html="html"></div>
 
+     <button x-on:click="show=false; if (duration) { clearTimeout(duration); duration = null; }"
+    " class="px-1 text-2xl" style="position: absolute; top:0; right:0;">
+        &times
+    </button>
+    
     @include('components.assets')
 
 </div>
