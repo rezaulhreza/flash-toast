@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorName\Skeleton\Facades;
+namespace Rezaulhreza\FlashToast\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \VendorName\Skeleton\Skeleton
  */
-class Skeleton extends Facade
+class FlashToastFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \VendorName\Skeleton\Skeleton::class;
+        return 'flash-toast';
     }
 }

@@ -1,92 +1,126 @@
-# :package_description
+# Flash Toast- Toast library with Livewire and Alpine
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rezaulhreza/flash-toast.svg?style=flat-square)](https://packagist.org/packages/rezaulhreza/flash-toast)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/rezaulhreza/flash-toast/run-tests?label=tests)](https://github.com/rezaulhreza/flash-toast/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/rezaulhreza/flash-toast/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/rezaulhreza/flash-toast/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/rezaulhreza/flash-toast.svg?style=flat-square)](https://packagist.org/packages/rezaulhreza/flash-toast)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require rezaulhreza/flash-toast
 ```
-
-You can publish and run the migrations with:
-
+then publish the config file 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
+composer require rezaulhreza/flash-toast-config
 ```
-
-You can publish the config file with:
-
+publish the view files
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="flash-toast-views"
 ```
 
 ## Usage
+Runs with the TALL stack: Laravel, TailwindCSS, Livewire, AlpineJS.
+
+Guide:
+
+Available methods:
+success- info - warning - danger.
+title, html, level, duration.
+
+use ```FlashToast``` in the component class.
+
+In the component class:
+Example:
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+$this->toastInfo('this is a info toast');
+$this->toastSuccess('this is a successful toast');
 ```
 
-## Testing
+Of course the above are customisable.
+
+To add a html code or title or duration even custom level(level is the type of toast e.g. - success, info etc).
+Example:
+
+ ```php
+use FlashToast; // don't forget to import it!!!
+ $this->toastSuccess('This is a string message');
+ ```
+
+p.s: to showcase the usage in the readme, a space was left intentionally otherwise it would compile the markdown preview with h1. Use actual markup when using within the applciation scenario.
+
+
+Blade component:
+```bash
+component/toast.blade.php
+```
+Styles are inside a blade file, however, you can customize it
+
+
+An example is given below
+```php
+<?php
+namespace Rezaulhreza\FlashToast\Example;
+
+use Livewire\Component;
+use Rezaulhreza\FlashToast\FlashToast;
+
+class FlashToastExample extends Component
+{
+
+    public function stringMessage()
+    {
+        $this->toastSuccess('This is a string message');
+    }
+
+    public function text()
+    {
+        $this->flashToast((new \Rezaulhreza\FlashToast\Manager\ToastManager)->text('Some text'));
+    }
+
+    public function html()
+    {
+        $this->flashToast((new \Rezaulhreza\FlashToast\Manager\ToastManager)->title('My title')->level('warning')->html('<h2 class="text-2xl">Sub title</h2> <b>Warning</b>'));
+    }
+
+    public function duration()
+    {
+        $this->flashToast((new \Rezaulhreza\FlashToast\Manager\ToastManager)->text('Showing for 200 ms')->showForMilliseconds(200));
+    }
+
+    public function render()
+    {
+        return view('flash-toast-example');
+    }
+}
+```
+
+### Testing
 
 ```bash
 composer test
 ```
 
-## Changelog
+### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
+### Security
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+If you discover any security related issues, please email emailrezahere@gmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
+-   [Rezaul H Reza](https://github.com/rezaulhreza)
+-   [All Contributors](../../contributors)
 
 ## License
 
