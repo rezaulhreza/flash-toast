@@ -1,4 +1,5 @@
 <?php
+
 namespace Rezaulhreza\FlashToast\Manager;
 
 use Rezaulhreza\FlashToast\FlashToast;
@@ -17,7 +18,6 @@ class ToastManager
 
     /** Duration in milliseconds, default 5000 */
     protected int $duration = 5000;
-
 
     public function title(string $title)
     {
