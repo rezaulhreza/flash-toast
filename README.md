@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/rezaulhreza/flash-toast.svg?style=flat-square)](https://packagist.org/packages/rezaulhreza/flash-toast)
 
 ## Demo Project
-**[FlashToast](https://github.com/rezaulhreza/flash-toast)** 
+**[FlashToast Demo](https://github.com/rezaulhreza/flash-toast-demo)** 
 
 ## Installation
 
