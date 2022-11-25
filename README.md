@@ -23,7 +23,7 @@ php artisan vendor:publish --tag="flash-toast-views"
 Once you publish the file, move the files from 
 ```resources\views\vendor\flash-toast\components``` 
 to 
-``````resources\views\components```.
+````resources\views\components```.
 now you can place the file anywhere you want such as <x-flash-toast/>.
 
 
