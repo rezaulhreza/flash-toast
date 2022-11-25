@@ -1,3 +1,5 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+Introduced 8 easily accessible methods. Inlcuding light and dark toast.
+Added reusability.
+Updated tests.
