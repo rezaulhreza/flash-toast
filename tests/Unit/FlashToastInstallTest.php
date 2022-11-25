@@ -1,7 +1,7 @@
 <?php
+
 namespace Rezaulhreza\FlashToast\Tests\Unit;
 
-use Illuminate\Support\Facades\Storage;
 use Rezaulhreza\FlashToast\Tests\TestCase;
 
 class FlashToastInstallTest extends TestCase

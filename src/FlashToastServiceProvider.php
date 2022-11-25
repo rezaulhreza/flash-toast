@@ -10,7 +10,6 @@ class FlashToastServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-
         $package
             ->name('flash-toast')
             ->hasConfigFile()

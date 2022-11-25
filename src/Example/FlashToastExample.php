@@ -2,14 +2,13 @@
 
 namespace Rezaulhreza\FlashToast\Example;
 
-use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use Rezaulhreza\FlashToast\FlashToast;
 
 class FlashToastExample extends Component
 {
     use FlashToast;
-    
+
     public function stringMessage()
     {
         $this->toastSuccess('This is a string message');
@@ -36,14 +35,11 @@ class FlashToastExample extends Component
     }
 
     public function render()
-
     {
-
         return <<<'blade'
 
             <div></div>
 
         blade;
-
     }
 }

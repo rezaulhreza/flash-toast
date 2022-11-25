@@ -5,7 +5,6 @@ use Rezaulhreza\FlashToast\Tests\TestCase;
 
 class FlashToastExampleTest extends TestCase
 {
-
     public function setUp(): void
     {
         parent::setUp();
@@ -29,7 +28,7 @@ class FlashToastExampleTest extends TestCase
                 'text' => 'Some text',
                 'html' => '',
                 'level' => 'success',
-                'duration' => 5000
+                'duration' => 5000,
             ]);
     }
 
@@ -90,5 +89,4 @@ class FlashToastExampleTest extends TestCase
                 'duration' => 200,
             ]);
     }
-
 }
