@@ -12,7 +12,7 @@ return [
         'secondary' => 'secondary',
         'dark' => 'dark',
         'error' => 'error',
-        
+
     ],
     //Available toast content types
 
