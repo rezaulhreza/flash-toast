@@ -4,6 +4,8 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/rezaulhreza/flash-toast/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/rezaulhreza/flash-toast/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/rezaulhreza/flash-toast.svg?style=flat-square)](https://packagist.org/packages/rezaulhreza/flash-toast)
 
+## Demo Project
+**[FlashToast](https://github.com/rezaulhreza/flash-toast)** 
 
 ## Installation
 
