@@ -2,6 +2,7 @@
 
 return [
     'name' => 'Flash Toast',
+
     'toast_type' => [
         'success' => 'success',
         'danger' => 'error',

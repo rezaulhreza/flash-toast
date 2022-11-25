@@ -5,7 +5,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/rezaulhreza/flash-toast.svg?style=flat-square)](https://packagist.org/packages/rezaulhreza/flash-toast)
 
 
-
 ## Installation
 
 You can install the package via composer:
