@@ -7,6 +7,10 @@ return [
         'danger' => 'danger',
         'warning' => 'warning',
         'info' => 'info',
+        'light' => 'light',
+        'primary' => 'primary'
+        'secondary' => 'secondary',
+        'dark' => 'dark',
     ],
     //Available toast content types
 
