@@ -1,4 +1,4 @@
-<div class="fixed" :class="'alert alert-' + level" style="padding-bottom: 5rem; right: 25px; bottom: 25px;"
+<div class="fixed" :class="'alert alert-' + level" style="right: 25px; bottom: 25px;"
     x-data="{
         show: false,
         level: '',
