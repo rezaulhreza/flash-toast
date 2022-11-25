@@ -2,16 +2,14 @@
 
 namespace Rezaulhreza\FlashToast;
 
-use Illuminate\Support\Facades\Log;
 use Rezaulhreza\FlashToast\Manager\ToastManager;
 
 trait FlashToast
 {
     /**
-     * @param string|ToastManager $message
-     * @param string $level
+     * @param  string|ToastManager  $message
+     * @param  string  $level
      */
-
     public function toastSuccess(string $message): void
     {
         $this->flashToast($message, config('flash-toast.toast_type.success'));
@@ -32,9 +30,9 @@ trait FlashToast
         $this->flashToast($message, config('flash-toast.toast_type.info'));
     }
 
-    protected function flashToast($content, string $level = 'success' ): void
+    protected function flashToast($content, string $level = 'success'): void
     {
-        $this->dispatchBrowserEvent (
+        $this->dispatchBrowserEvent(
             'toast-open',
             is_string($content) ?
                 [
@@ -45,7 +43,7 @@ trait FlashToast
                     'text' => $content->getText(),
                     'html' => $content->toHtml(),
                     'level' => $content->getLevel(),
-                    'duration' => $content->getDuration()
+                    'duration' => $content->getDuration(),
                 ]
         );
     }
