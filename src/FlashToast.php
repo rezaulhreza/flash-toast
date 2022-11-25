@@ -29,7 +29,7 @@ trait FlashToast
     {
         $this->flashToast($message, config('flash-toast.toast_type.info'));
     }
-    
+
     public function toastError(string $message): void
     {
         $this->flashToast($message, config('flash-toast.toast_type.error'));
