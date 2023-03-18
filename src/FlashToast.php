@@ -7,10 +7,9 @@ use Rezaulhreza\FlashToast\Manager\ToastManager;
 trait FlashToast
 {
     /**
-     * @param  string|ToastManager  $message
      * @param  string  $level
      */
-    public function toastSuccess(string $message): void
+    public function toastSuccess(string|\ToastManager $message): void
     {
         $this->flashToast($message, config('flash-toast.toast_type.success'));
     }
