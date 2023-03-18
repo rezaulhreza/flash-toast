@@ -2,8 +2,6 @@
 
 namespace Rezaulhreza\FlashToast;
 
-use Rezaulhreza\FlashToast\Manager\ToastManager;
-
 trait FlashToast
 {
     /**
